@@ -29,4 +29,8 @@
 
  <tx:annotation-driven transaction-manager="transactionManager" />
  
+ <beans profile="hsqldb">
+     <util:properties id="hibernateProps" location="classpath:hibernate.hsqldb.properties" />
+ </beans>
+ 
 </beans>

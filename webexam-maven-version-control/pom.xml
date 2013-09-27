@@ -19,6 +19,7 @@
   	<log4j.version>1.2.17</log4j.version>
   	<mysql.version>5.1.25</mysql.version>
   	<junit.version>4.11</junit.version>
+  	<hsqldb.version>2.3.0</hsqldb.version>
   </properties>
   
   <!-- All modules version and referred third party libs version -->
@@ -91,6 +92,13 @@
   			<artifactId>hibernate-c3p0</artifactId>
   			<version>${hibernate.version}</version>
   		</dependency>
+  		
+  		<dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>${hsqldb.version}</version>
+            <!-- <scope>test</scope> -->
+        </dependency>
   		
   		<!-- mysql -->
   		<dependency>

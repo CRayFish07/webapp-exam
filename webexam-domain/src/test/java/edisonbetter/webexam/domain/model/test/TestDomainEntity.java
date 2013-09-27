@@ -6,8 +6,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import edisonbetter.webexam.domain.model.Exam;
 import edisonbetter.webexam.infra.dao.DataAccessObject;
+import edisonbetter.webexam.infra.test.TestBase;
 
-public class TestDomainEntity {
+public class TestDomainEntity extends TestBase{
 	private DataAccessObject<Exam> dao;
 	
 	@Before
@@ -18,9 +19,14 @@ public class TestDomainEntity {
 
 	@Test
 	public void test() {
-		Exam exam = new Exam();
-		exam.setName("abc");
-		dao.create(exam);
+		Exam exam1 = new Exam();
+		exam1.setName("abc");
+		
+		Exam exam2 = new Exam();
+		exam2.setName("efg");
+		
+		dao.create(exam1);
+		dao.create(exam2);
 	}
 
 }

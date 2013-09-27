@@ -4,6 +4,7 @@
 package edisonbetter.webexam.infra.dao.hibernate;
 
 import java.io.Serializable;
+import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -64,6 +65,19 @@ public class HibernateDAO<T> implements DataAccessObject<T> {
 	@Transactional
 	public void delete(T instance) {
 		getSession().delete(instance);
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<T> list() {
+		return getSession().createQuery(defaultFROMClause().toString()).list();
+	}
+	
+	/**
+	 * return a StringBuffer which strores HQL "from" statement
+	 */
+	protected StringBuffer defaultFROMClause(){
+		return new StringBuffer("FROM " + entityClass.getName() + " ");
 	}
 
 }
