@@ -1,0 +1,8 @@
+# Compiled source #
+###################
+*.class
+*.tmp
+/target
+/bin
+/build
+MANIFEST.MF

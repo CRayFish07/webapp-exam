@@ -9,5 +9,7 @@
   	<groupId>edisonbetter</groupId>
   	<artifactId>webexam-maven-version-control</artifactId>
   	<version>0.0.1-SNAPSHOT</version>
+  	<relativePath>../webexam-maven-version-control</relativePath>
   </parent>
+  
 </project>

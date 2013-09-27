@@ -10,12 +10,51 @@
     <groupId>edisonbetter</groupId>
     <artifactId>webexam-maven-config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <relativePath>../../webexam-build/webexam-maven-config</relativePath>
+    <relativePath>../webexam-maven-config</relativePath>
   </parent>
   
   <!-- All modules version and referred third party libs version -->
   <dependencyManagement>
   	<dependencies>
+  		<!-- webexam business  -->
+  		<dependency>
+  			<groupId>edisonbetter</groupId>
+  			<artifactId>webexam-domain</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  		
+  		<dependency>
+  			<groupId>edisonbetter</groupId>
+  			<artifactId>webexam-service</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  		
+  		<dependency>
+  			<groupId>edisonbetter</groupId>
+  			<artifactId>webexam-web-core</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  		
+  		<!-- webexam infra  -->
+  		<dependency>
+  			<groupId>edisonbetter</groupId>
+  			<artifactId>webexam-core</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  		
+  		<dependency>
+  			<groupId>edisonbetter</groupId>
+  			<artifactId>webexam-data-access</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  		
+  		<!-- webexam entry  -->
+  		<dependency>
+  			<groupId>edisonbetter</groupId>
+  			<artifactId>webexam-entry</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  		
   	</dependencies>
   </dependencyManagement>
 </project>

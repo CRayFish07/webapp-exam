@@ -10,12 +10,26 @@
     <groupId>edisonbetter</groupId>
     <artifactId>webexam-maven-config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <relativePath>../../webexam-build/webexam-maven-config</relativePath>
+    <relativePath>../webexam-maven-config</relativePath>
   </parent>
   
   <!-- to be built modules -->
   <modules>
+  	<!-- maven build -->
+  	<module>../webexam-maven-config</module>
+  	<module>../webexam-maven-version-control</module>
   	
+  	<!-- business -->
+  	<module>../webexam-domain</module>
+  	<module>../webexam-service</module>
+  	<module>../webexam-web-core</module>
+  	
+  	<!-- infra -->
+  	<module>../webexam-core</module>
+  	<module>../webexam-data-access</module>
+  	
+  	<!-- entry -->
+  	<module>../webexam-entry</module>
   </modules>
   
 </project>

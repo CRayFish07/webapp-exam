@@ -48,6 +48,15 @@
                 <testFailureIgnore>false</testFailureIgnore> <!-- Ignoring the failures will do -->
             </configuration>
         </plugin>
+        
+        <plugin>
+	        <artifactId>maven-war-plugin</artifactId>
+	        <version>2.3</version>
+	        <configuration>
+	          <warSourceDirectory>WebContent</warSourceDirectory>
+	          <failOnMissingWebXml>false</failOnMissingWebXml>
+	        </configuration>
+        </plugin>
   	</plugins>
   	
   	 <pluginManagement>
