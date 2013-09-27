@@ -5,6 +5,10 @@ package edisonbetter.webexam.infra.dao.hibernate;
 
 import java.io.Serializable;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.transaction.annotation.Transactional;
+
 import edisonbetter.webexam.infra.dao.DataAccessObject;
 
 /**
@@ -13,41 +17,53 @@ import edisonbetter.webexam.infra.dao.DataAccessObject;
  */
 public class HibernateDAO<T> implements DataAccessObject<T> {
 	private Class<T> entityClass;
+	private SessionFactory sessionFactory;
+	
+	public HibernateDAO(SessionFactory sessionFactory){
+		this.sessionFactory = sessionFactory;
+	}
 	
 	@Override
 	public void setEntity(Class<T> entityClass) {
-		// TODO Auto-generated method stub
-		
+		this.entityClass = entityClass;
 	}
 
 	@Override
 	public Class<T> getEntityClass() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.entityClass;
 	}
-
+	
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+	
+	protected final Session getSession(){
+		return sessionFactory.getCurrentSession();
+	}
+	
 	@Override
+	@Transactional
 	public void create(T instance) {
-		// TODO Auto-generated method stub
-		
+		getSession().save(instance);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
+	@Transactional
 	public T read(Serializable primaryKeyValue) {
-		// TODO Auto-generated method stub
-		return null;
+		return (T)getSession().get(entityClass, primaryKeyValue);
 	}
 
 	@Override
+	@Transactional
 	public void update(T instance) {
-		// TODO Auto-generated method stub
-		
+		getSession().update(instance);
 	}
 
 	@Override
+	@Transactional
 	public void delete(T instance) {
-		// TODO Auto-generated method stub
-		
+		getSession().delete(instance);
 	}
 
 }

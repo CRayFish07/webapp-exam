@@ -12,4 +12,12 @@
   	<relativePath>../webexam-maven-version-control</relativePath>
   </parent>
   
+  <dependencies>
+  	<dependency>
+  		<groupId>edisonbetter</groupId>
+  		<artifactId>webexam-data-access</artifactId>
+  	</dependency>
+  	
+  </dependencies>
+  
 </project>
