@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>webexam-maven-version-control</artifactId>
+  <packaging>pom</packaging>
+  <name>webexam-maven-version-control</name>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <!-- parent info -->
+  <parent>
+    <groupId>edisonbetter</groupId>
+    <artifactId>webexam-maven-config</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../../webexam-build/webexam-maven-config</relativePath>
+  </parent>
+  
+  <!-- All modules version and referred third party libs version -->
+  <dependencyManagement>
+  	<dependencies>
+  	</dependencies>
+  </dependencyManagement>
+</project>
