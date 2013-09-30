@@ -6,13 +6,13 @@ import edisonbetter.webexam.infra.model.BaseEntity;
 
 public interface GenericService<T extends BaseEntity> {
 	
-	public void create(T baseEntity);
+	public void create(T instance);
 	
-	public void update(T baseEntity);
+	public void update(T instance);
 	
-	public void delete(T baseEntity);
+	public void delete(T instance);
 	
-	public T query(String uuid);
+	public T query(Class<T> clazz, String uuid);
 	
-	public List<T> list();
+	public List<T> list(Class<T> clazz);
 }

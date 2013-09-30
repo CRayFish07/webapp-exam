@@ -13,7 +13,7 @@ public class TestDomainEntity extends TestBase{
 	
 	@Before
 	public void setUp() throws Exception {
-		dao = (DataAccessObject<Exam>) new ClassPathXmlApplicationContext("infra.xml").getBean("defaultDAO");
+		dao = (DataAccessObject<Exam>) new ClassPathXmlApplicationContext("infra-context.xml").getBean("defaultDAO");
 		dao.setEntity(Exam.class);
 	}
 
